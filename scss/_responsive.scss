@@ -1,0 +1,104 @@
+@include media-md {
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .nav {
+        visibility: visible;
+
+        .menu-nav {
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+            background: transparent;
+            text-align: right;
+
+            &__item {
+                display: inline;
+                padding-right: 1.5rem;
+            }
+
+            &__link {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .about__bio {
+        font-size: 1.5rem;
+    }
+
+    .projects {
+        &__bio-image {
+            height: 40vh;
+        }
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .text-secondary {
+            font-size: 3rem;
+        }
+    }
+
+    .contact__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@include media-lg {
+    .projects {
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .contact__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@include media-xl {
+    .about .jobs {
+        width: 80vw;
+        margin: 2rem auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+
+        .jobs__job:nth-child(1) {
+            order: 3;
+        }
+        .jobs__job:nth-child(2) {
+            order: 2;
+        }
+        .jobs__job:nth-child(3) {
+            order: 1;
+        }
+
+        &__job {
+            h2, h3 {
+                margin: 0.5rem 0;
+            }
+
+            h6 {
+                margin: 0.3rem 0;
+            }
+
+            p {
+                line-height: 1.2;
+            }
+        }
+    }
+
+    .projects__bio-image {
+        height: 50vh;
+    }
+
+    .projects {
+        &__items {
+            grid-template-columns: repeat(4, 1fr);
+            width: 80vw;
+            margin-top: 80px;
+        }
+    }
+}
